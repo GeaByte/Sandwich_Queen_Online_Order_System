@@ -3,8 +3,8 @@
 <div class="copyright py-4 text-center text-white">
     <div class="container">
         <small>
-            This 3280 Laravel demo is developed based on the Practical Laravel Texbook<br>
-            by <em>Daniel Correa</em> and <em>Paola Vallejo</em>
+            Li Hsin Lin - 300368867<br>
+            Raymond Wang – 300374626
         </small>
     </div>
 </div>
