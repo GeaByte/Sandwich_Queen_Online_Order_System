@@ -1,18 +1,41 @@
 .bg-secondary {
-    background-color: #2c3e50 !important;
+    background-color: #101b1f !important;
 }
 
 .copyright {
     background-color: #1a252f;
 }
+
 .bg-primary {
-    background-color: #1abc9c !important;
+    background-color: #d07814 !important;
 }
-nav{
+
+nav {
     font-weight: 700;
 }
 
-.img-card{
+#logo{
+    height: 100px;
+    margin-right: 10px;
+}
+
+.img-card {
     height: 18vw;
     object-fit: cover;
+}
+
+/* banner height */
+.carousel-item {
+    height: 66.67vh;
+    /* 2/3 of the viewport height */
+}
+
+/* banner picture */
+.carousel-item img {
+    height: 100%;
+    /* Make the image cover the full height of the container */
+    width: auto;
+    /* Adjust width to maintain aspect ratio */
+    object-fit: cover;
+    /* Cover the container without losing the aspect ratio */
 }
