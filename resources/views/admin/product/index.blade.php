@@ -11,6 +11,7 @@
     <table class="table table-bordered table-striped">
       <thead>
         <tr>
+          <th scope="col">Image</th>
           <th scope="col">ID</th>
           <th scope="col">Name</th>
           <th scope="col">Price</th>
@@ -21,6 +22,7 @@
       <tbody>
         @foreach ($viewData["products"] as $product)
         <tr>
+          <td class="col-lg-4 ms-auto me-2"><img src="{{asset('/storage/' . $product->getImage())}}" alt="product image"></td>
           <td>{{ $product->getId() }}</td>
           <td>{{ $product->getName() }}</td>
           <td>{{ $product->getPrice() }}</td>
