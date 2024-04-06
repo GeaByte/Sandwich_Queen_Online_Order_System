@@ -29,7 +29,7 @@
           <div class="mb-3 row">
             <label class="col-lg-2 col-md-6 col-sm-12 col-form-label">Price:</label>
             <div class="col-lg-10 col-md-6 col-sm-12">
-              <input name="price" value="{{ $viewData['product']->getPrice() }}" type="number" class="form-control">
+              <input name="price" value="{{ $viewData['product']->getPrice() }}" type="number" step="0.01" class="form-control">
             </div>
           </div>
         </div>

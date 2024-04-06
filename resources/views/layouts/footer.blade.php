@@ -3,7 +3,7 @@
 <div class="copyright py-4 text-center text-white">
     <div class="container">
         <small>
-        Copyright - Li Hsin Lin – 300368867&nbsp;Raymond Wang – 300374626
+        &copy;Copyright - Li Hsin Lin(300368867)&nbsp;&amp;&nbsp;Raymond Wang(300374626)
         </small>
     </div>
 </div>
