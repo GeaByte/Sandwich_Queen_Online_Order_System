@@ -3,6 +3,8 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\View;
+
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -23,6 +25,12 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        View::composer('auth.login', function ($view) {
+            $view->with('viewData', ["subtitle" => "Login"]);
+        });
+
+        View::composer('auth.register', function ($view) {
+            $view->with('viewData', ["subtitle" => "Register"]);
+        });
     }
 }

@@ -10,11 +10,15 @@
     background-color: #d07814 !important;
 }
 
+.btn-success {
+    background-color: #889a2b !important;
+}
+
 nav {
     font-weight: 700;
 }
 
-#logo{
+#logo {
     height: 100px;
     margin-right: 10px;
 }
@@ -38,4 +42,13 @@ nav {
     /* Adjust width to maintain aspect ratio */
     object-fit: cover;
     /* Cover the container without losing the aspect ratio */
+}
+
+.form-control:focus {
+    border-color: #d07814; /* Change to your desired color */
+    box-shadow: 0 0 0 0.15rem #d07814; /* Optional: Adjust RGBA values to match the color */
+}
+
+.forgot-password-btn{
+    color: #d07814;
 }

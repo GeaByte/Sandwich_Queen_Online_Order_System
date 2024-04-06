@@ -1,5 +1,5 @@
 @extends('layouts.app')
-
+@section('subtitle', $viewData["subtitle"])
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
@@ -63,7 +63,7 @@
 
                         <div class="row mb-0">
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary text-white">
+                                <button type="submit" class="btn btn-success text-white">
                                     {{ __('Register') }}
                                 </button>
                             </div>
