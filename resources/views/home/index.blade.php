@@ -14,16 +14,16 @@
       <img src="{{ asset('/img/iStock-1482650278.jpg') }}" class="d-block w-100" alt="...">
     </div>
     <div class="carousel-item">
-      <img src="{{ asset('/img/game.png') }}" class="d-block w-100" alt="...">
+      <img src="{{ asset('/img/WhatsApp Image 2024-04-05 at 17.45.15_f3c04f8f.jpg') }}" class="d-block w-100" alt="...">
     </div>
     <div class="carousel-item">
-      <img src="{{ asset('/img/game.png') }}" class="d-block w-100" alt="...">
+      <img src="{{ asset('/img/WhatsApp Image 2024-04-05 at 18.04.27_34958414.jpg') }}" class="d-block w-100" alt="...">
     </div>
     <div class="carousel-item">
-      <img src="{{ asset('/img/game.png') }}" class="d-block w-100" alt="...">
+      <img src="{{ asset('/img/WhatsApp Image 2024-04-05 at 18.04.26_1bcb76eb.jpg') }}" class="d-block w-100" alt="...">
     </div>
     <div class="carousel-item">
-      <img src="{{ asset('/img/game.png') }}" class="d-block w-100" alt="...">
+      <img src="{{ asset('/img/WhatsApp Image 2024-04-05 at 17.46.38_2f1bbba7.jpg') }}" class="d-block w-100" alt="...">
     </div>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#bannerCarousel" data-bs-slide="prev">
