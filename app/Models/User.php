@@ -34,6 +34,8 @@ class User extends Authenticatable
     protected $fillable = [
         'name',
         'email',
+        'phone',
+        'address',
         'password',
         'balance',
     ];
@@ -85,6 +87,26 @@ class User extends Authenticatable
     public function setEmail($email)
     {
         $this->attributes['email'] = $email;
+    }
+
+    public function getEPhone()
+    {
+        return $this->attributes['phone'];
+    }
+
+    public function setPhone($phone)
+    {
+        $this->attributes['phone'] = $phone;
+    }
+
+    public function getAddress()
+    {
+        return $this->attributes['address'];
+    }
+
+    public function setAddress($address)
+    {
+        $this->attributes['address'] = $address;
     }
 
     public function getPassword()
