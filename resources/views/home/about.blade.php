@@ -4,11 +4,11 @@
 @section('content')
 <div class="container">
 <div class="row">
-<div class="col-lg-4 ms-auto">
-<p class="lead">{{ $viewData["description"] }}</p>
+<div class="col-lg-4 ms-auto me-2">
+<p class="lead"><img id="about-image" src="{{ asset('/img/logo.webp') }}" alt="Sandwich Queen Logo"></p>
 </div>
-<div class="col-lg-4 me-auto">
-<p class="lead">{{ $viewData["author"] }}</p>
+<div class="col-lg-4 me-auto ms-2">
+<p class="lead">{{ $viewData["description"] }}</p>
 </div>
 </div>
 </div>
