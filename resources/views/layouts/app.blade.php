@@ -29,6 +29,11 @@
                     <a class="nav-link active" href="{{ route('home.about') }}">About</a>
                     <!-- auth part -->
                     <div class="vr bg-white mx-2 d-none d-lg-block"></div>
+                    @auth
+                        @if(auth()->user()->isAdmin())
+                            <a class="nav-link active" href="{{ route('admin.home.index') }}">Admin</a>
+                        @endif
+                    @endauth
                     @guest 
                     <a class="nav-link active" href="{{ route('login') }}">Login</a>
                     <a class="nav-link active" href="{{ route('register') }}">Register</a>

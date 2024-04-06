@@ -136,4 +136,8 @@ class User extends Authenticatable
     {
         $this->attributes['updated_at'] = $updatedAt;
     }
+    public function isAdmin()
+{
+    return $this->attributes['role'] === 'admin';
+}
 }
