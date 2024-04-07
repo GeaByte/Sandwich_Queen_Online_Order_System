@@ -25,7 +25,7 @@ class CartController extends Controller
     {
 
         $userId = Auth::id();
- 
+
 
         // Cart::validate($request);
 
@@ -36,7 +36,7 @@ class CartController extends Controller
             ->where('productID', $request->input('productID'))
             ->first();
 
-        
+
 
         if ($cartItem) {
             // add quantity
@@ -52,5 +52,11 @@ class CartController extends Controller
         }
 
         return redirect()->back()->with('success', 'Product added to cart');
+    }
+
+    public function delete($id)
+    {
+        Cart::destroy($id);
+        return back();
     }
 }

@@ -29,6 +29,8 @@ Route::get('/cart', 'App\Http\Controllers\CartController@index')->name("cart.ind
 Route::get('/order', 'App\Http\Controllers\OrderController@index')->name("order.index");
 Route::get('/order/{id}', 'App\Http\Controllers\OrderdetailController@index')->name("order.detail");
 Route::post('/cart/add', [CartController::class, 'add'])->name('cart.add');
+Route::delete('/cart/{cart}', [CartController::class, 'delete'])->name('cart.delete');
+
 
 
 
