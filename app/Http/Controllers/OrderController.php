@@ -20,7 +20,7 @@ class OrderController extends Controller
         $viewData["title"] = "Products  - CSIS 3560 Online Store Demo";
         $viewData["subtitle"] =  "Order";
         $viewData["userId"] = $userId;
-        $viewData["orsers"] = Order::with('user')->where('customerID', $userId)->get();
+        $viewData["orders"] = Order::with('user')->where('customerID', $userId)->orderBy('created_at', 'desc')->get();
         return view('order.index')->with("viewData", $viewData);
     }
 

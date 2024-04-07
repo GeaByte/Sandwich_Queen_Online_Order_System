@@ -44,4 +44,14 @@ class Order extends Model
     {
         $this->attributes['customerID'] = $customerID;
     }
+
+    public function getCreatedAt()
+    {
+        return $this->attributes['created_at'];
+    }
+
+    public function setCreatedAt($created_at)
+    {
+        $this->attributes['created_at'] = $created_at;
+    }
 }

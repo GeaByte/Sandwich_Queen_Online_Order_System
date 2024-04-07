@@ -14,6 +14,10 @@
     background-color: #889a2b !important;
 }
 
+.border-primary{
+    border-color: #d07814 !important;;
+}
+
 nav {
     font-weight: 700;
 }
