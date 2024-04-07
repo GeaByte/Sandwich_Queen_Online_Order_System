@@ -15,12 +15,16 @@
         </h5>
         <p class="card-text">{{ $viewData["product"]->getDescription() }}</p>
         <p class="card-text"><small class="text-muted"></small></p>
-        <form action="{{ route('cart.add') }}" method="POST">
-          @csrf
-          <input type="hidden" name="productID" value="{{ $viewData["product"]->getId() }}">
-          <input type="number" name="quantity" value="1" min="1">
-          <button type="submit" class="btn bg-primary text-white">Add to Cart</button>
-        </form>
+        @guest
+          <p>Please <a href="{{ route('login') }}">login</a> to add items to your cart.</p>
+        @else
+          <form action="{{ route('cart.add') }}" method="POST">
+            @csrf
+            <input type="hidden" name="productID" value="{{ $viewData["product"]->getId() }}">
+            <input type="number" name="quantity" value="1" min="1">
+            <button type="submit" class="btn bg-primary text-white">Add to Cart</button>
+          </form>
+        @endguest
       </div>
     </div>
   </div>
