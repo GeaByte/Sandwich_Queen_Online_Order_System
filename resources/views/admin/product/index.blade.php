@@ -22,7 +22,7 @@
       <tbody>
         @foreach ($viewData["products"] as $product)
         <tr>
-          <td class="col-lg-4 ms-auto me-2"><img src="{{asset('/storage/' . $product->getImage())}}" alt="product image"></td>
+          <td class="col-lg-4 ms-auto me-2"><img src="{{ asset('/storage/' . $product->getImage()) }}" class="img-thumbnail" alt="{{ $product->getName() }}"></td>
           <td>{{ $product->getId() }}</td>
           <td>{{ $product->getName() }}</td>
           <td>{{ $product->getPrice() }}</td>
