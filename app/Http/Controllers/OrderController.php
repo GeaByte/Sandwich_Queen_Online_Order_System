@@ -12,7 +12,18 @@ use Illuminate\Http\Request;
 
 class OrderController extends Controller
 {
-    
+    public function index()
+    {
+        $userId = Auth::id();
+
+        $viewData = [];
+        $viewData["title"] = "Products  - CSIS 3560 Online Store Demo";
+        $viewData["subtitle"] =  "Order";
+        $viewData["userId"] = $userId;
+        $viewData["orsers"] = Order::with('user')->where('customerID', $userId)->get();
+        return view('order.index')->with("viewData", $viewData);
+    }
+
 
     public function store(Request $request)
     {
@@ -37,13 +48,10 @@ class OrderController extends Controller
 
             // clear cart
             Cart::where('customerID', $userId)->delete();
-
         });
 
         $viewData["title"] = "Sandwich Queen";
         $viewData["subtitle"] = "Queen of Sandwiches, Ruler of Flavors";
-        return view('home.index')->with("viewData", $viewData);    }
-
+        return redirect()->route('order.index');
+    }
 }
-
-?>
