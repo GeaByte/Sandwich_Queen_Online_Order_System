@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CartController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,6 +24,13 @@ Route::get('/about', 'App\Http\Controllers\HomeController@about')->name("home.ab
 
 Route::get('/products', 'App\Http\Controllers\ProductController@index')->name("product.index");
 Route::get('/products/{id}', 'App\Http\Controllers\ProductController@show')->name("product.show");
+
+Route::get('/cart', 'App\Http\Controllers\CartController@index')->name("cart.index");
+Route::get('/order', 'App\Http\Controllers\OrderController@index')->name("order.index");
+Route::get('/order/{id}', 'App\Http\Controllers\OrderdetailController@index')->name("order.detail");
+Route::post('/cart/add', [CartController::class, 'add'])->name('cart.add');
+
+
 
 Route::middleware('admin')->group(function(){
     Route::get('/admin', 'App\Http\Controllers\Admin\AdminHomeController@index')->name("admin.home.index");

@@ -30,6 +30,8 @@
                     <!-- auth part -->
                     <div class="vr bg-white mx-2 d-none d-lg-block"></div>
                     @auth
+                    <a class="nav-link active" href="{{ route('cart.index') }}">Cart</a>
+                    <a class="nav-link active" href="{{ route('admin.home.index') }}">Profile</a>
                         @if(auth()->user()->isAdmin())
                             <a class="nav-link active" href="{{ route('admin.home.index') }}">Admin</a>
                         @endif

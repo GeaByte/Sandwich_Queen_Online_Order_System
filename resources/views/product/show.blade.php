@@ -14,7 +14,13 @@
           {{ $viewData["product"]->getName() }} (${{ $viewData["product"]->getPrice() }})
         </h5>
         <p class="card-text">{{ $viewData["product"]->getDescription() }}</p>
-        <p class="card-text"><small class="text-muted">Add to Cart</small></p>
+        <p class="card-text"><small class="text-muted"></small></p>
+        <form action="{{ route('cart.add') }}" method="POST">
+          @csrf
+          <input type="hidden" name="productID" value="{{ $viewData["product"]->getId() }}">
+          <input type="number" name="quantity" value="1" min="1">
+          <button type="submit" class="btn bg-primary text-white">Add to Cart</button>
+        </form>
       </div>
     </div>
   </div>
