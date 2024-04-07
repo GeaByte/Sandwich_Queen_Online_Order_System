@@ -1,7 +1,7 @@
 @section('edit_form')
 <div class="card mb-4">
   <div class="card-header">
-    Create Products
+    Edit {{$viewData['product']->getName()}}
   </div>
   <div class="card-body">
     @if($errors->any())
@@ -29,7 +29,7 @@
           <div class="mb-3 row">
             <label class="col-lg-2 col-md-6 col-sm-12 col-form-label">Price:</label>
             <div class="col-lg-10 col-md-6 col-sm-12">
-              <input name="price" value="{{ $viewData['product']->getPrice() }}" type="number" class="form-control">
+              <input name="price" value="{{ $viewData['product']->getPrice() }}" type="number" step="0.01" class="form-control">
             </div>
           </div>
         </div>
@@ -40,6 +40,7 @@
             <label class="col-lg-2 col-md-6 col-sm-12 col-form-label">Image:</label>
             <div class="col-lg-10 col-md-6 col-sm-12">
               <input class="form-control" type="file" name="image">
+              <small>Select a new image to update;<br> otherwise, leave it blank</small>
             </div>
           </div>
         </div>
@@ -48,7 +49,7 @@
         </div>
       </div>
       <div class="mb-3">
-        <label class="form-label">Description</label>
+        <label class="form-label">Description:</label>
         <textarea class="form-control" name="description"
           rows="3">{{ $viewData['product']->getDescription() }}</textarea>
       </div>

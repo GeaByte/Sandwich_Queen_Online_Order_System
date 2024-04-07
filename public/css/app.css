@@ -60,3 +60,7 @@ nav {
 #about-image{
     width: 100%;
 }
+
+.nav-link:hover {
+    background-color:grey;
+}
