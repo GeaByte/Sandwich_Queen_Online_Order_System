@@ -15,10 +15,10 @@ return new class extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('CustomerID'); 
+            $table->unsignedBigInteger('customerID'); 
             $table->timestamps();
 
-            $table->foreign('CustomerID')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('customerID')->references('id')->on('users')->onDelete('cascade');
         });
     }
 
@@ -30,7 +30,7 @@ return new class extends Migration
     public function down()
     {
         Schema::table('carts', function (Blueprint $table) {
-            $table->dropForeign(['CustomerID']);
+            $table->dropForeign(['customerID']);
         });
 
         Schema::dropIfExists('orders');

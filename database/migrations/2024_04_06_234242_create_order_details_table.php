@@ -15,13 +15,13 @@ return new class extends Migration
     {
         Schema::create('order_details', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('OrderID');
-            $table->unsignedBigInteger('ProductID'); 
-            $table->integer('Quantity');
+            $table->unsignedBigInteger('orderID');
+            $table->unsignedBigInteger('productID'); 
+            $table->integer('quantity');
             $table->timestamps();
 
-            $table->foreign('OrderID')->references('id')->on('orders')->onDelete('cascade');
-            $table->foreign('ProductID')->references('id')->on('products')->onDelete('cascade');
+            $table->foreign('orderID')->references('id')->on('orders')->onDelete('cascade');
+            $table->foreign('productID')->references('id')->on('products')->onDelete('cascade');
         });
     }
 
@@ -34,8 +34,8 @@ return new class extends Migration
     {
 
         Schema::table('carts', function (Blueprint $table) {
-            $table->dropForeign(['OrderID']);
-            $table->dropForeign(['ProductID']);
+            $table->dropForeign(['orderID']);
+            $table->dropForeign(['productID']);
         });
 
         Schema::dropIfExists('order_details');
