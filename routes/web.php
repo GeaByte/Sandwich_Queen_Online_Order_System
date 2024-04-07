@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\OrderController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -30,6 +32,7 @@ Route::get('/order', 'App\Http\Controllers\OrderController@index')->name("order.
 Route::get('/order/{id}', 'App\Http\Controllers\OrderdetailController@index')->name("order.detail");
 Route::post('/cart/add', [CartController::class, 'add'])->name('cart.add');
 Route::delete('/cart/{cart}', [CartController::class, 'delete'])->name('cart.delete');
+Route::post('/order', [OrderController::class, 'store'])->name('order.store');
 
 
 

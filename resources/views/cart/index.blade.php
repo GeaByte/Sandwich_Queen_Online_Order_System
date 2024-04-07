@@ -30,4 +30,12 @@
     </div>
   @endforelse
 </div>
+@if($viewData["carts"]->isNotEmpty())
+  <div class="col-12 text-center mt-4">
+    <form action="{{ route('order.store') }}" method="POST">
+      @csrf
+      <button type="submit" class="btn btn-success">Checkout</button>
+    </form>
+  </div>
+@endif
 @endsection
