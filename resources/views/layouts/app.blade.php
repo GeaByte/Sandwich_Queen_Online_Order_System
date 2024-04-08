@@ -9,14 +9,14 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
 
     <link href="{{ asset('/css/app.css') }}" rel="stylesheet">
-    <link rel="icon" href="/storage/logo.webp" type="image/x-icon">
+    <link rel="icon" href="{{ asset('/img/logo.webp') }}" type="image/x-icon">
     <title>@yield('title','Online Store')</title>
 </head>
 <body>
     <!-- header -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-secondary py-1">
         <div class="container">
-            <a class="navbar-brand" href="{{ route('home.index') }}"><img id="logo" src="{{ asset('/storage/logo.webp') }}" alt="Sandwich Queen Logo">Sandwich Queen</a>
+            <a class="navbar-brand" href="{{ route('home.index') }}"><img id="logo" src="{{ asset('/img/logo.webp') }}" alt="Sandwich Queen Logo">Sandwich Queen</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>

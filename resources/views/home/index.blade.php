@@ -12,19 +12,19 @@
   </div>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="{{ asset('/storage/grand_opening3.png') }}" class="d-block w-100" alt="grand opening">
+      <img src="{{ asset('/img/grand_opening3.png') }}" class="d-block w-100" alt="grand opening">
     </div>
     <div class="carousel-item">
-      <img src="{{ asset('/storage/grilled_chicken_sandwich.jpeg') }}" class="d-block w-100" alt="grilled chicken sandwich">
+      <img src="{{ asset('/img/grilled_chicken_sandwich.jpeg') }}" class="d-block w-100" alt="grilled chicken sandwich">
     </div>
     <div class="carousel-item">
-      <img src="{{ asset('/storage/crispy chicken sandwich.png') }}" class="d-block w-100" alt="crispy chicken sandwich">
+      <img src="{{ asset('/img/crispy chicken sandwich.png') }}" class="d-block w-100" alt="crispy chicken sandwich">
     </div>
     <div class="carousel-item">
-      <img src="{{ asset('/storage/double cheese burger.png') }}" class="d-block w-100" alt="double cheese burger">
+      <img src="{{ asset('/img/double cheese burger.png') }}" class="d-block w-100" alt="double cheese burger">
     </div>
     <div class="carousel-item">
-      <img src="{{ asset('/storage/french fries.jpeg') }}" class="d-block w-100" alt="french fries">
+      <img src="{{ asset('/img/french fries.jpeg') }}" class="d-block w-100" alt="french fries">
     </div>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#bannerCarousel" data-bs-slide="prev">
