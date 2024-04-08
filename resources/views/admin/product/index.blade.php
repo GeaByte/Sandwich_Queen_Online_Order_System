@@ -14,6 +14,7 @@
           <th scope="col">Image</th>
           <th scope="col">ID</th>
           <th scope="col">Name</th>
+          <th scope="col">Category</th>
           <th scope="col">Price</th>
           <th scope="col">Edit</th>
           <th scope="col">Delete</th>
@@ -25,6 +26,7 @@
           <td class="col-lg-4 ms-auto me-2"><img src="{{ asset('/storage/' . $product->getImage()) }}" class="img-thumbnail" alt="{{ $product->getName() }}"></td>
           <td>{{ $product->getId() }}</td>
           <td>{{ $product->getName() }}</td>
+          <td>{{ $product->getCategory() }}</td>
           <td>{{ $product->getPrice() }}</td>
           <td>
             <a class="btn btn-primary" 

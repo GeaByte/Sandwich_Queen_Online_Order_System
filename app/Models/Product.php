@@ -27,6 +27,7 @@ class Product extends Model
             "description" => "required",
             "price" => "required|numeric|gt:0",
             'image' => 'image',
+            'category' => "required",
         ]);
     }
 
@@ -98,5 +99,13 @@ class Product extends Model
     public function setUpdatedAt($updatedAt)
     {
         $this->attributes['updated_at'] = $updatedAt;
+    }
+
+    public function getCategory(){
+        return $this->attributes['category'];
+    }
+
+    public function setCategory($category){
+        $this->attributes['category'] = $category;
     }
 }

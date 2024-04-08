@@ -45,7 +45,18 @@
           </div>
         </div>
         <div class="col">
-          &nbsp;
+          <div class="mb-3 row">
+            <label class="col-lg-2 col-md-6 col-sm-12 col-form-label">Category:</label>
+            <div class="col-lg-10 col-md-6 col-sm-12">
+              <select class="form-control" name="category">
+                <option value="sandwich" {{ $viewData['product']->getCategory() == "sandwich" ? "selected" : "" }}>Sandwich</option>
+                <option value="burger" {{ $viewData['product']->getCategory() == "burger" ? "selected" : "" }}>Burger</option>
+                <option value="salad" {{ $viewData['product']->getCategory() == "salad" ? "selected" : "" }}>Salad</option>
+                <option value="side" {{ $viewData['product']->getCategory() == "side" ? "selected" : "" }}>Side</option>
+                <option value="beverage" {{ $viewData['product']->getCategory() == "beverage" ? "selected" : "" }}>Beverage</option>
+              </select>
+            </div>
+          </div>
         </div>
       </div>
       <div class="mb-3">

@@ -10,7 +10,6 @@
       <div class="card-body text-center">
         <a href="{{ route('product.show', ['id'=> $product->getId()]) }}"
           class="btn bg-primary text-white">{{ $product->getName() }}({{ $product->getPrice() }})</a>
-          
       </div>
     </div>
   </div>

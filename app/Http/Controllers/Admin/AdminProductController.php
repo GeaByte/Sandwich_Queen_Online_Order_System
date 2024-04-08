@@ -13,7 +13,7 @@ class AdminProductController extends Controller
     public function index()
     {
         $viewData = [];
-        $viewData["title"] = "Admin Page - Products - CSIS3280 Online Store";
+        $viewData["title"] = "Sandwich Queen Admin";
         $viewData["products"] = Product::all();
         return view('admin.product.index')->with("viewData", $viewData);
     }
@@ -26,6 +26,7 @@ class AdminProductController extends Controller
         $newProduct->setName($request->input('name'));
         $newProduct->setDescription($request->input('description'));
         $newProduct->setPrice($request->input('price'));
+        $newProduct->setCategory($request->input('category'));
         $newProduct->setImage("game.png");
         $newProduct->save();
 
@@ -50,7 +51,7 @@ class AdminProductController extends Controller
     public function edit($id)
     {
         $viewData = [];
-        $viewData["title"] = "Admin Page - Edit Product - Online Store";
+        $viewData["title"] = "Sandwich Queen Admin Edit";
         $viewData["product"] = Product::findOrFail($id);
         return view('admin.product.edit')->with("viewData", $viewData);
     }
@@ -62,6 +63,7 @@ class AdminProductController extends Controller
         $product = Product::findOrFail($id);
         $product->setName($request->input('name'));
         $product->setDescription($request->input('description'));
+        $product->setCategory($request->input('category'));
         $product->setPrice($request->input('price'));
 
         if ($request->hasFile('image')) {

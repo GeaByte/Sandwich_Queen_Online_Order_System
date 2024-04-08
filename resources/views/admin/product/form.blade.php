@@ -42,7 +42,19 @@
           </div>
         </div>
         <div class="col">
-          &nbsp;
+        <div class="mb-3 row">
+            <label class="col-lg-2 col-md-6 col-sm-12 col-form-label">Category:</label>
+            <div class="col-lg-10 col-md-6 col-sm-12">
+              <select class="form-control" name="category">
+                <option value=""></option>
+                <option value="sandwich">Sandwich</option>
+                <option value="burger">Burger</option>
+                <option value="salad">Salad</option>
+                <option value="side">Side</option>
+                <option value="beverage">Beverage</option>
+              </select>
+            </div>
+          </div>
         </div>
       </div>
       <div class="mb-3">
