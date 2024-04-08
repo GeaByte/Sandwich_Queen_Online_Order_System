@@ -12,9 +12,6 @@
   </div>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="{{ asset('/img/grand_opening3.png') }}" class="d-block w-100" alt="grand opening">
-    </div>
-    <div class="carousel-item">
       <img src="{{ asset('/img/grilled_chicken_sandwich.jpeg') }}" class="d-block w-100" alt="grilled chicken sandwich">
     </div>
     <div class="carousel-item">
@@ -25,6 +22,9 @@
     </div>
     <div class="carousel-item">
       <img src="{{ asset('/img/french fries.jpeg') }}" class="d-block w-100" alt="french fries">
+    </div>
+    <div class="carousel-item">
+      <img src="{{ asset('/img/Caesar Salad.jpeg') }}" class="d-block w-100" alt="Caesar Salad">
     </div>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#bannerCarousel" data-bs-slide="prev">

@@ -10,7 +10,7 @@
 
     <link href="{{ asset('/css/app.css') }}" rel="stylesheet">
     <link rel="icon" href="{{ asset('/img/logo.webp') }}" type="image/x-icon">
-    <title>@yield('title','Online Store')</title>
+    <title>@yield('title','Sandwich Queen')</title>
 </head>
 <body>
     <!-- header -->

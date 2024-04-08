@@ -13,7 +13,7 @@ class UserController extends Controller
         $userId = Auth::id(); 
 
         $viewData = [];
-        $viewData["title"] = "Profile - CSIS 3560 Online Store Demo";
+        $viewData["title"] = "Sandwich Queen";
         $viewData["subtitle"] = "Profile";
         $viewData["userId"] = $userId;
         $viewData["user"] = Auth::user();;

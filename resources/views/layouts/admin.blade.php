@@ -8,7 +8,7 @@
     integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
   <link href="{{ asset('/css/admin.css') }}" rel="stylesheet" />
-  <title>@yield('title', 'Admin - CSIS 3280 Online Store')</title>
+  <title>@yield('title', 'Sandwich Queen')</title>
 </head>
 
 <body>
@@ -28,7 +28,7 @@
     <!-- sidebar -->
     <div class="col content-grey">
       <nav class="p-3 shadow text-end">
-        <span class="profile-font">Admin</span>
+        <span class="profile-font">Welcome Admin </span>
         <img class="img-profile rounded-circle" src="{{ asset('/img/undraw_profile.svg') }}">
       </nav>
 
