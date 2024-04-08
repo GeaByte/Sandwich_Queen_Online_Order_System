@@ -1,6 +1,7 @@
 @extends('layouts.app')
 @section('title', $viewData["title"])
 @section('content')
+
 <div id="bannerCarousel" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -11,19 +12,19 @@
   </div>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="{{ asset('/img/iStock-1482650278.jpg') }}" class="d-block w-100" alt="...">
+      <img src="{{ asset('/storage/grand_opening3.png') }}" class="d-block w-100" alt="grand opening">
     </div>
     <div class="carousel-item">
-      <img src="{{ asset('/img/WhatsApp Image 2024-04-05 at 17.45.15_f3c04f8f.jpg') }}" class="d-block w-100" alt="...">
+      <img src="{{ asset('/storage/grilled_chicken_sandwich.jpeg') }}" class="d-block w-100" alt="grilled chicken sandwich">
     </div>
     <div class="carousel-item">
-      <img src="{{ asset('/img/WhatsApp Image 2024-04-05 at 18.04.27_34958414.jpg') }}" class="d-block w-100" alt="...">
+      <img src="{{ asset('/storage/crispy chicken sandwich.png') }}" class="d-block w-100" alt="crispy chicken sandwich">
     </div>
     <div class="carousel-item">
-      <img src="{{ asset('/img/WhatsApp Image 2024-04-05 at 18.04.26_1bcb76eb.jpg') }}" class="d-block w-100" alt="...">
+      <img src="{{ asset('/storage/double cheese burger.png') }}" class="d-block w-100" alt="double cheese burger">
     </div>
     <div class="carousel-item">
-      <img src="{{ asset('/img/WhatsApp Image 2024-04-05 at 17.46.38_2f1bbba7.jpg') }}" class="d-block w-100" alt="...">
+      <img src="{{ asset('/storage/french fries.jpeg') }}" class="d-block w-100" alt="french fries">
     </div>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#bannerCarousel" data-bs-slide="prev">
