@@ -7,7 +7,6 @@ use App\Models\Order;
 use App\Models\Cart;
 use App\Models\OrderDetail;
 
-
 use Illuminate\Http\Request;
 
 class OrderController extends Controller

@@ -3,7 +3,7 @@
 @section('subtitle', $viewData["subtitle"])
 @section('username', $viewData["user"]->getName())
 @section('content')
-<div>Hi, @yield('username', 'fail') Update information and order history</div>
+<div>Hi, @yield('username', 'fail')</div>
 <div class="card mb-3">
 <div class="card-header">{{ __('Update Information') }}</div>
 <div class="card-body">

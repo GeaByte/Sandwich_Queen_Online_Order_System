@@ -38,10 +38,13 @@
                             <li><a class="dropdown-item" href="{{ route('order.index') }}">Order</a></li>
                         </ul>
                     </li>
+
                     @if(auth()->user()->isAdmin())
                     <a class="nav-link active" href="{{ route('admin.home.index') }}">Admin</a>
                     @endif
+
                     @endauth
+                    
                     @guest
                     <a class="nav-link active" href="{{ route('login') }}">Login</a>
                     <a class="nav-link active" href="{{ route('register') }}">Register</a>

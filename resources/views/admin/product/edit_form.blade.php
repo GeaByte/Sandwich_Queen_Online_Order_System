@@ -4,6 +4,7 @@
     Edit {{$viewData['product']->getName()}}
   </div>
   <div class="card-body">
+    
     @if($errors->any())
     <ul class="alert alert-danger list-unstyled">
       @foreach($errors->all() as $error)

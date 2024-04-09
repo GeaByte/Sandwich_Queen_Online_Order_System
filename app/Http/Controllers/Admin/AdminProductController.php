@@ -4,7 +4,6 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-
 use App\Models\Product;
 use Illuminate\Support\Facades\Storage;
 
@@ -39,7 +38,6 @@ class AdminProductController extends Controller
             $newProduct->setImage($imageName);
             $newProduct->save();
         }
-
         return back();
     }
 
@@ -74,7 +72,6 @@ class AdminProductController extends Controller
             );
             $product->setImage($imageName);
         }
-
         $product->save();
         return redirect()->route('admin.product.index');
     }
