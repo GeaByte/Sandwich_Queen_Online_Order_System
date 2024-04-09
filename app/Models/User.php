@@ -89,7 +89,7 @@ class User extends Authenticatable
         $this->attributes['email'] = $email;
     }
 
-    public function getEPhone()
+    public function getPhone()
     {
         return $this->attributes['phone'];
     }
