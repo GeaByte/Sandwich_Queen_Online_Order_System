@@ -34,6 +34,7 @@ Route::get('/order/{id}', 'App\Http\Controllers\OrderController@detail')->name("
 Route::post('/cart/add', [CartController::class, 'add'])->name('cart.add');
 Route::delete('/cart/{cart}', [CartController::class, 'delete'])->name('cart.delete');
 Route::post('/order', [OrderController::class, 'store'])->name('order.store');
+Route::put('/cart/{cart}', [CartController::class, 'update'])->name('cart.update');
 
 
 

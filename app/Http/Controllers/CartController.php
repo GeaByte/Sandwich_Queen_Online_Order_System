@@ -59,4 +59,13 @@ class CartController extends Controller
         Cart::destroy($id);
         return back();
     }
+
+    public function update(Request $request, $id)
+    {
+        $cartItem = Cart::findOrFail($id);
+        $cartItem->quantity = $request->input('quantity');
+        $cartItem->save();
+
+        return back()->with('success', 'Cart updated successfully.');
+    }
 }
