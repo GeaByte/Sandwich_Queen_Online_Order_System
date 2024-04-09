@@ -1,5 +1,6 @@
 @extends('layouts.admin')
 @section('title', $viewData["title"])
+@section('adminName', $viewData["admin"]->getName())
 @section('content')
 <div class="card">
   <div class="card-header">

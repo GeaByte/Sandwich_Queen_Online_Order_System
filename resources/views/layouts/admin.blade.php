@@ -28,7 +28,7 @@
     <!-- sidebar -->
     <div class="col content-grey">
       <nav class="p-3 shadow text-end">
-        <span class="profile-font">Welcome Admin </span>
+        <span class="profile-font">Welcome @yield('adminName', "admin") </span>
         <img class="img-profile rounded-circle" src="{{ asset('/img/undraw_profile.svg') }}">
       </nav>
 

@@ -30,12 +30,12 @@ Route::get('/products/{id}', 'App\Http\Controllers\ProductController@show')->nam
 Route::get('/cart', 'App\Http\Controllers\CartController@index')->name("cart.index");
 Route::get('/order', 'App\Http\Controllers\OrderController@index')->name("order.index");
 Route::get('/profile', 'App\Http\Controllers\UserController@index')->name("user.index");
-Route::get('/order/{id}', 'App\Http\Controllers\OrderController@detail')->name("order.detail");
+Route::put('/profile', 'App\Http\Controllers\UserController@update')->name("user.update");
+Route::get('/order/{id}', 'App\Http\Controllers\OrderdetailController@index')->name("order.detail");
 Route::post('/cart/add', [CartController::class, 'add'])->name('cart.add');
 Route::delete('/cart/{cart}', [CartController::class, 'delete'])->name('cart.delete');
 Route::post('/order', [OrderController::class, 'store'])->name('order.store');
 Route::put('/cart/{cart}', [CartController::class, 'update'])->name('cart.update');
-
 
 
 
