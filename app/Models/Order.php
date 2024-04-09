@@ -10,7 +10,7 @@ class Order extends Model
     // use HasFactory;
     public function orderDetails()
     {
-        return $this->hasMany(OrderDetail::class);
+        return $this->hasMany(OrderDetail::class, 'orderID', 'id');
     }
 
     public static function validate($request)

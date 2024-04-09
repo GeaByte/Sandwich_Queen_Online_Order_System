@@ -30,6 +30,11 @@ class Product extends Model
             'category' => "required",
         ]);
     }
+    
+    public function orderDetails()
+    {
+        return $this->hasMany(OrderDetail::class);
+    }
 
     public function getId()
     {

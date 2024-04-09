@@ -8,10 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class OrderDetail extends Model
 {
     // use HasFactory;
-    public function order()
-    {
-        return $this->belongsTo(Order::class);
-    }
 
     public static function validate($request)
     {
@@ -20,6 +16,16 @@ class OrderDetail extends Model
             "productID" => "required",
             "quantity" => "required|numeric|gt:0",
         ]);
+    }
+
+    public function order()
+    {
+        return $this->belongsTo(Order::class, 'orderID', 'id');
+    }
+
+    public function product()
+    {
+    return $this->belongsTo(Product::class, 'productID');
     }
 
     public function getId()

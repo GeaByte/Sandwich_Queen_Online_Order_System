@@ -54,4 +54,28 @@ class OrderController extends Controller
         $viewData["subtitle"] = "Queen of Sandwiches, Ruler of Flavors";
         return redirect()->route('order.index');
     }
+
+    public function detail($id)
+    {
+        $userId = Auth::id();
+
+        $order = Order::with(['orderDetails.product'])
+            ->where('id', $id)
+            ->where('customerID', $userId)
+            ->firstOrFail();
+
+        $viewData = [];
+        $viewData["title"] = "Products - CSIS 3560 Online Store Demo";
+        $viewData["subtitle"] = "Order Detail";
+        $viewData["userId"] = $userId;
+        $viewData["order"] = $order;
+
+        $totalAmount = 0;
+        foreach ($order->orderDetails as $detail) {
+            $totalAmount += $detail->quantity * $detail->product->price;
+        }
+        $viewData["totalAmount"] = $totalAmount;
+
+        return view('order.detail')->with("viewData", $viewData);
+    }
 }
