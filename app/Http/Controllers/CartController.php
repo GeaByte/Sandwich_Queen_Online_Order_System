@@ -51,7 +51,7 @@ class CartController extends Controller
             $newCart->save();
         }
 
-        return redirect()->back()->with('success', 'Product added to cart');
+        return redirect('/products')->with('success', 'Product added to cart');
     }
 
     public function delete($id)

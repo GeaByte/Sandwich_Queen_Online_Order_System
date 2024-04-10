@@ -33,7 +33,7 @@ Route::delete('/cart/{cart}', [CartController::class, 'delete'])->name('cart.del
 Route::put('/cart/{cart}', [CartController::class, 'update'])->name('cart.update');
 
 Route::get('/order', 'App\Http\Controllers\OrderController@index')->name("order.index");
-Route::get('/order/{id}', 'App\Http\Controllers\OrderdetailController@index')->name("order.detail");
+Route::get('/order/{id}', 'App\Http\Controllers\OrderController@detail')->name("order.detail");
 Route::post('/order', [OrderController::class, 'store'])->name('order.store');
 
 Route::get('/profile', 'App\Http\Controllers\UserController@index')->name("user.index");
