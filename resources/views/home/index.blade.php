@@ -2,6 +2,12 @@
 @section('title', $viewData["title"])
 @section('content')
 
+<p>Current Weather in Vancouver:</p>
+<ul>
+  <li>Temperature: {{ $viewData['weather']['main']['temp'] }} K</li>
+  <li>Weather Condition: {{ $viewData['weather']['weather'][0]['description'] }}</li>
+</ul>
+
 <div id="bannerCarousel" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
